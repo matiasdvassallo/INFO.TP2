@@ -1,2 +1,1 @@
-# INFO.TP2
-TP 1 - Informática General - Cátedra Drelichman TN - UNA (Área Transdepartamental de Artes Multimediales) - Sofia Suarez y Matías Vassallo
+# TP 2 " " - Informática General - Cátedra Drelichman TN - UNA (Área Transdepartamental de Artes Multimediales) - Gabriel Raimundo, Sofia Suarez y Matías Vassallo

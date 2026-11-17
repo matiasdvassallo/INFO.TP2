@@ -1,0 +1,183 @@
+/* ==========================================================================
+   VARIABLES GLOBALES (EDITAR AQUÍ CUANDO DEFINAN LA PALETA DEFINITIVA)
+   ========================================================================== */
+:root {
+  --bg-principal: #FAF6F0;       /* Fondo general */
+  --bg-secundario: #E8F4F8;      /* Fondo para bloques destacados / alternados */
+  --texto-negro: #111111;        /* Tipografía principal y bordes */
+  --acento-primario: #2938FF;    /* Color interactivo / hover */
+  --acento-secundario: #FF4081;  /* Color de acento / etiquetas */
+
+  --fuente-titulos: 'Syne', sans-serif;
+  --fuente-cuerpo: 'DM Sans', sans-serif;
+  --grosor-borde: 2px;
+}
+
+/* ==========================================================================
+   ESTILOS BASE Y TIPOGRAFÍA
+   ========================================================================== */
+body {
+  background-color: var(--bg-principal);
+  color: var(--texto-negro);
+  font-family: var(--fuente-cuerpo);
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, .navbar-brand, .nav-brutal-item {
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+}
+
+.bg-principal {
+  background-color: var(--bg-principal);
+}
+
+.bg-bloque-destacado {
+  background-color: var(--bg-secundario);
+}
+
+/* ==========================================================================
+   HERO ESTILO SEBASTIÁN CURI
+   ========================================================================== */
+.texto-gigante {
+  font-size: calc(6.5vw + 1.8rem);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--texto-negro);
+  border-bottom: var(--grosor-borde) solid var(--texto-negro);
+}
+
+.hero-obra-contenedor {
+  border-bottom: var(--grosor-borde) solid var(--texto-negro);
+  overflow: hidden;
+}
+
+.hero-imagen {
+  height: 65vh;
+  object-fit: cover;
+  display: block;
+}
+
+/* ==========================================================================
+   NAVEGACIÓN STICKY BRUTALISTA
+   ========================================================================== */
+.navbar-brutal {
+  background-color: var(--bg-principal);
+  border-bottom: var(--grosor-borde) solid var(--texto-negro);
+  padding: 0;
+}
+
+.nav-brutal-item {
+  font-size: 1.05rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--texto-negro) !important;
+  padding: 0.85rem 1.25rem !important;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-brutal-item:hover,
+.nav-brutal-item.active {
+  background-color: var(--acento-secundario);
+  color: var(--texto-negro) !important;
+}
+
+.dropdown-brutal {
+  background-color: var(--bg-principal);
+  border: var(--grosor-borde) solid var(--texto-negro);
+  padding: 0;
+}
+
+.dropdown-brutal .dropdown-item {
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  color: var(--texto-negro);
+  padding: 0.65rem 1rem;
+  border-bottom: 1px solid var(--texto-negro);
+}
+
+.dropdown-brutal li:last-child .dropdown-item {
+  border-bottom: none;
+}
+
+.dropdown-brutal .dropdown-item:hover {
+  background-color: var(--acento-primario);
+  color: #FFFFFF;
+}
+
+/* ==========================================================================
+   GRILLAS, BORDES E IMÁGENES DE SECCIÓN
+   ========================================================================== */
+.border-bottom-brutal {
+  border-bottom: var(--grosor-borde) solid var(--texto-negro);
+}
+
+.border-bottom-sm-brutal {
+  border-bottom: var(--grosor-borde) solid var(--texto-negro);
+}
+
+.img-modulo {
+  height: 280px;
+  object-fit: cover;
+  border-bottom: var(--grosor-borde) solid var(--texto-negro);
+}
+
+.img-destacada {
+  height: 450px;
+  object-fit: cover;
+}
+
+/* ==========================================================================
+   BOTONES Y FOOTER
+   ========================================================================== */
+.btn-brutal {
+  background-color: transparent;
+  color: var(--texto-negro);
+  border: var(--grosor-borde) solid var(--texto-negro);
+  border-radius: 0;
+  font-family: var(--fuente-titulos);
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 0.75rem 1.25rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-brutal:hover {
+  background-color: var(--texto-negro);
+  color: var(--bg-principal);
+}
+
+.bg-footer {
+  background-color: var(--texto-negro);
+}
+
+.footer-link {
+  color: #FFFFFF;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.footer-link:hover {
+  border-bottom-color: var(--acento-secundario);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES (MOBILE FIRST - AL FINAL DEL ARCHIVO)
+   ========================================================================== */
+@media (min-width: 768px) {
+  .border-end-md-brutal {
+    border-right: var(--grosor-borde) solid var(--texto-negro);
+  }
+
+  .border-bottom-sm-brutal {
+    border-bottom: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .border-end-lg-brutal {
+    border-right: var(--grosor-borde) solid var(--texto-negro);
+  }
+}

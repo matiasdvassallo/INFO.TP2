@@ -1,26 +1,160 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <title> Página 5 </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intervenir la ciudad | Marta Minujín</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <main>
-        <nav>
-            <ul>
-                <li><a href="index.html"> Inicio </a></li>
-                <li><a href="pagina1.html"> Página 1 </a></li>
-                <li><a href="pagina2.html"> Página 2 </a></li>
-                <li><a href="pagina3.html"> Página 3 </a></li>
-                <li><a href="pagina4.html"> Página 4 </a></li>
-                <li><a href="pagina5.html"> Página 5 </a></li>
-                <li><a href="pagina6.html"> Página 6 </a></li>
-                <li><a href="contacto.html"> Contacto </a></li>
-                <li><a href="pagina3.html"> Créditos </a></li>
+
+  <header class="container-fluid px-0 bg-principal">
+    <a class="marca-enlace" href="../index.html" aria-label="Volver al inicio de Marta Minujín">
+      <span class="texto-gigante text-uppercase text-center d-block m-0 py-2 py-md-3">Marta Minujín</span>
+    </a>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-brutal sticky-top" aria-label="Navegación principal">
+    <div class="container-fluid px-0">
+      <button class="navbar-toggler ms-auto me-3 my-2 border-2 border-dark rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 d-flex justify-content-around text-center m-0">
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-brutal-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Acciones</a>
+            <ul class="dropdown-menu dropdown-brutal rounded-0 m-0">
+              <li><a class="dropdown-item" href="../acciones/di-tella.html">Di Tella y el happening</a></li>
+              <li><a class="dropdown-item" href="../acciones/despues-del-evento.html">Después del evento</a></li>
             </ul>
-        </nav>
-    </main>
-    <script src="js/pagina5.js"></script>
-</body>    
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-brutal-item active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Objetos</a>
+            <ul class="dropdown-menu dropdown-brutal rounded-0 m-0">
+              <li><a class="dropdown-item" href="pop-mercancia.html">Pop y mercancía</a></li>
+              <li><a class="dropdown-item" href="intervenir-ciudad.html" aria-current="page">Intervenir la ciudad</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-brutal-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trayectoria</a>
+            <ul class="dropdown-menu dropdown-brutal rounded-0 m-0">
+              <li><a class="dropdown-item" href="../trayectoria/cronologia.html">Cronología</a></li>
+              <li><a class="dropdown-item" href="../trayectoria/recepcion.html">Reconocimiento y recepción</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="../contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="../creditos.html">Créditos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav aria-label="breadcrumb" class="border-bottom-brutal px-3 px-md-5 py-3">
+    <ol class="breadcrumb m-0 text-uppercase fw-bold small">
+      <li class="breadcrumb-item"><a href="../index.html" class="text-dark">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="index.html" class="text-dark">Objetos</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Intervenir la ciudad</li>
+    </ol>
+  </nav>
+
+  <main>
+    <section class="container-fluid p-4 p-md-5 border-bottom-brutal">
+      <span class="etiqueta-seccion">02 / Objetos</span>
+      <h1 class="titulo-pagina text-uppercase mt-3 mb-3">Intervenir la ciudad</h1>
+      <p class="lead intro-bajada mb-0">Obras de participación masiva que transformaron temporalmente espacios de la ciudad. Qué pasó durante su presentación y qué quedó después.</p>
+    </section>
+    <article class="container-fluid border-bottom-brutal px-0">
+      <div class="row g-0">
+        <div class="col-lg-5 p-4 p-md-5 border-end-lg-brutal bg-bloque-destacado">
+          <span class="etiqueta-seccion">1979 / Feria de las Naciones, Buenos Aires</span>
+          <h2 class="display-5 fw-bold text-uppercase mt-3">El Obelisco de pan dulce</h2>
+          <span class="etiqueta-destino">Consumida o repartida</span>
+        </div>
+        <div class="col-lg-7 p-4 p-md-5 texto-editorial">
+          <h3 class="h5 text-uppercase">La intervención</h3>
+          <p>Una estructura tubular de metal recubierta con 10.000 unidades de pan dulce.</p>
+          <h3 class="h5 text-uppercase">Lo que pasó después</h3>
+          <p>Los espectadores participaron del desmontaje y reparto de los paquetes con ayuda de los bomberos voluntarios.</p>
+          <p class="nota-archivo mb-0"><strong>Fuente:</strong> Catálogo del MALBA, p. 112</p>
+        </div>
+      </div>
+    </article>
+    <article class="container-fluid border-bottom-brutal px-0">
+      <div class="row g-0">
+        <div class="col-lg-5 p-4 p-md-5 border-end-lg-brutal bg-bloque-destacado">
+          <span class="etiqueta-seccion">1981 / Zona exterior al centro de exposiciones, Bienal de Medellín</span>
+          <h2 class="display-5 fw-bold text-uppercase mt-3">Carlos Gardel de fuego</h2>
+          <span class="etiqueta-destino">Destruida</span>
+        </div>
+        <div class="col-lg-7 p-4 p-md-5 texto-editorial">
+          <h3 class="h5 text-uppercase">La intervención</h3>
+          <p>Una obra de participación masiva cuya estructura se prendió fuego al final de la acción.</p>
+          <h3 class="h5 text-uppercase">Lo que pasó después</h3>
+          <p>Después de la quema, los restos de la estructura se exhibieron durante los meses que duró la bienal.</p>
+          <p class="nota-archivo mb-0"><strong>Fuente:</strong> Catálogo del Museo Nacional de Bellas Artes, p. 116</p>
+        </div>
+      </div>
+    </article>
+    <article class="container-fluid border-bottom-brutal px-0">
+      <div class="row g-0">
+        <div class="col-lg-5 p-4 p-md-5 border-end-lg-brutal bg-bloque-destacado">
+          <span class="etiqueta-seccion">1983 / Plazoleta Provincia de Tucumán, avenida 9 de Julio, Buenos Aires</span>
+          <h2 class="display-5 fw-bold text-uppercase mt-3">El Partenón de libros</h2>
+          <span class="etiqueta-destino">Consumida o repartida</span>
+        </div>
+        <div class="col-lg-7 p-4 p-md-5 texto-editorial">
+          <h3 class="h5 text-uppercase">La intervención</h3>
+          <p>Una obra de participación masiva instalada sobre la avenida 9 de Julio.</p>
+          <h3 class="h5 text-uppercase">Lo que pasó después</h3>
+          <p>El 24 de diciembre, la estructura se inclinó con grúas para que el público retirara los libros.</p>
+          <p class="nota-archivo mb-0"><strong>Fuente:</strong> Catálogo del MALBA, p. 120</p>
+        </div>
+      </div>
+    </article>
+    <section class="container-fluid p-4 p-md-5 cierre-seccion">
+      <h2 class="h3 text-uppercase">Seguir explorando</h2>
+      <a class="btn btn-brutal mt-2" href="pop-mercancia.html">Pop y mercancía</a>
+      <a class="btn btn-brutal mt-2" href="../trayectoria/cronologia.html">Ver cronología</a>
+    </section>
+  </main>
+
+  <footer class="container-fluid bg-footer text-white py-5 px-4 px-md-5">
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <h4 class="fw-bold text-uppercase mb-2">Marta Minujín</h4>
+        <p class="text-white-50 mb-1">Sitio web desarrollado para Trabajo Práctico 2 — Informática General 2026.</p>
+        <small class="text-white-50">Cátedra Drelichman / Paleo / Nadel / Morales — UNA Artes Multimediales.</small>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-uppercase fw-bold mb-3">Secciones</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-1"><a class="footer-link" href="../acciones/index.html">Acciones</a></li>
+          <li class="mb-1"><a class="footer-link" href="../objetos/index.html">Objetos</a></li>
+          <li class="mb-1"><a class="footer-link" href="../trayectoria/index.html">Trayectoria</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-uppercase fw-bold mb-3">Institucional</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-1"><a class="footer-link" href="../contacto.html">Contacto</a></li>
+          <li class="mb-1"><a class="footer-link" href="../creditos.html">Créditos del equipo</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

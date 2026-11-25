@@ -74,47 +74,75 @@
     <!-- Introducción -->
     <section class="container-fluid px-0 border-bottom-brutal" aria-labelledby="titulo-cronologia">
       <div class="p-4 p-md-5">
-        <span class="etiqueta-seccion">Trayectoria / 1959–hoy</span>
+        <span class="etiqueta-seccion">Trayectoria / 1963–hoy</span>
         <h1 id="titulo-cronologia" class="titulo-pagina text-uppercase mt-3 mb-3">Cronología</h1>
-        <p class="lead intro-bajada mb-0">Cada obra aparece con su año, su tipo y lo que le pasó después de su presentación. Usen los filtros para comparar destinos.</p>
+        <p class="lead intro-bajada mb-0">Cada obra aparece con su año, su tipo y lo que le pasó después de su presentación. Elegí las categorías y sus opciones para filtrar.</p>
       </div>
     </section>
 
-    <!-- Cómo leer la línea -->
-    <section class="container-fluid px-0 border-bottom-brutal" aria-labelledby="como-leer">
+    <!-- Categorías: cada columna activa su filtro -->
+    <section class="container-fluid px-0 border-bottom-brutal" aria-label="Categorías de filtro">
       <div class="row g-0">
-        <div class="col-md-6 p-4 p-md-5 border-end-md-brutal">
-          <h2 id="como-leer" class="h4 fw-bold text-uppercase">Destino</h2>
-          <p class="mb-0">Qué le pasó a la obra al terminar: se conserva, fue destruida o el público la consumió o se llevó sus materiales.</p>
-        </div>
-        <div class="col-md-6 p-4 p-md-5">
-          <h2 class="h4 fw-bold text-uppercase">Registro</h2>
-          <p class="mb-0">Qué queda hoy para conocerla: imágenes de la obra, notas de prensa o solo una descripción escrita.</p>
-        </div>
+        <button type="button" class="categoria-btn col-md-4 p-4 p-md-5 border-end-md-brutal text-start"
+                data-categoria="tipo" aria-pressed="false" aria-controls="panel-tipo">
+          <span class="h4 fw-bold text-uppercase d-block">Tipo</span>
+          <span class="d-block mt-2">Si la obra depende de un momento y del público (acción), es una pieza material (objeto) o ambas.</span>
+        </button>
+        <button type="button" class="categoria-btn col-md-4 p-4 p-md-5 border-end-md-brutal text-start"
+                data-categoria="destino" aria-pressed="true" aria-controls="panel-destino">
+          <span class="h4 fw-bold text-uppercase d-block">Destino</span>
+          <span class="d-block mt-2">Qué le pasó a la obra al terminar: se conserva, fue destruida o desmontada, el público la consumió o se llevó sus materiales y si fue reconstruída.</span>
+        </button>
+        <button type="button" class="categoria-btn col-md-4 p-4 p-md-5 text-start"
+                data-categoria="registro" aria-pressed="false" aria-controls="panel-registro">
+          <span class="h4 fw-bold text-uppercase d-block">Registro</span>
+          <span class="d-block mt-2">Qué queda hoy para conocerla: imágenes, videos, notas de prensa o documentación.</span>
+        </button>
       </div>
+    </section>
+
+    <!-- Paneles de opciones: se muestran según la categoría activa -->
+    <section class="container-fluid p-4 p-md-5 border-bottom-brutal" aria-label="Opciones de filtro">
+      <div id="panel-tipo" class="filtros-panel" hidden>
+        <span class="etiqueta-panel">Tipo</span>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="tipo" data-valor="accion" aria-pressed="false">Acción</button>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="tipo" data-valor="objeto" aria-pressed="false">Objeto</button>
+      </div>
+
+      <div id="panel-destino" class="filtros-panel">
+        <span class="etiqueta-panel">Destino</span>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="destino" data-valor="se-conserva" aria-pressed="false">Se conserva</button>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="destino" data-valor="desmontada" aria-pressed="false">Desmontada</button>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="destino" data-valor="destruida" aria-pressed="false">Destruida</button>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="destino" data-valor="consumida" aria-pressed="false">Consumida o repartida</button>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="destino" data-valor="reconstruida" aria-pressed="false">Reconstruida</button>
+      </div>
+
+      <div id="panel-registro" class="filtros-panel" hidden>
+        <span class="etiqueta-panel">Registro</span>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="registro" data-valor="fotos" aria-pressed="false">Fotografías</button>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="registro" data-valor="video" aria-pressed="false">Video</button>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="registro" data-valor="documentos" aria-pressed="false">Documentos</button>
+        <button type="button" class="btn btn-brutal filtro-chip" data-categoria="registro" data-valor="prensa" aria-pressed="false">Notas de prensa</button>
+      </div>
+
     </section>
 
     <!-- Filtros y línea de tiempo -->
     <section class="container-fluid p-4 p-md-5 border-bottom-brutal" aria-labelledby="titulo-filtros">
       <h2 id="titulo-filtros" class="visually-hidden">Eventos</h2>
 
-      <div class="filtros" role="group" aria-label="Filtrar por destino">
-        <button type="button" class="btn btn-brutal filtro-btn active" data-filtro="todas" aria-pressed="true">Todas</button>
-        <button type="button" class="btn btn-brutal filtro-btn" data-filtro="se-conserva" aria-pressed="false">Se conserva</button>
-        <button type="button" class="btn btn-brutal filtro-btn" data-filtro="destruida" aria-pressed="false">Destruida</button>
-        <button type="button" class="btn btn-brutal filtro-btn" data-filtro="consumida" aria-pressed="false">Consumida o repartida</button>
-        <button type="button" class="btn btn-brutal filtro-btn" data-filtro="desmontada" aria-pressed="false">Desmontada</button>
-        <button type="button" class="btn btn-brutal filtro-btn" data-filtro="reconstruida" aria-pressed="false">Reconstruida</button>
-      </div>
-
       <ol class="linea-tiempo list-unstyled">
 
-        <li class="evento" data-destino="destruida">
+        <li class="evento" data-tipo="accion" data-destino="destruida" data-registro="fotos documentos">
           <details>
             <summary>
               <span class="evento-anio fw-bold">1963</span>
               <span class="evento-titulo">La Destrucción</span>
-              <span class="etiqueta-destino">Destruida</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="accion">Acción</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="destruida">Destruida</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="documentos">Documentos</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
@@ -124,20 +152,24 @@
               <dt>Destino</dt>
               <dd>Finalizada una exposición colaborativa en el taller de Minujin en Paris, el jueves 6 de junio comenzó La destrucción. Los artistas trasladaron las obras de Minujín al terreno baldío de la impasse Ronsin, las intervinieron, y luego fueron destruídas con hachazos, mientras Minujín soltaba quinientos pájaros al aire y cien conejos. Concluyó prendiendo fuego las obras. </dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Fotografías y documentación escrita</dd>
               <dt>Fuente</dt>
               <dd>Catálogo del MALBA, p. 51</dd>
             </dl>
           </details>
         </li>
 
-        <li class="evento" data-destino="desmontada reconstruida">
+        <li class="evento" data-tipo="accion" data-destino="desmontada reconstruida" data-registro="video fotos documentos">
           <details>
             <summary>
               <span class="evento-anio fw-bold">1965</span>
               <span class="evento-titulo">La Menesunda</span>
-              <span class="etiqueta-destino">Desmontada</span>
-              <span class="etiqueta-destino">Reconstruida</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="accion">Acción</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="desmontada">Desmontada</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="reconstruida">Reconstruida</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="video">Video</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="documentos">Documentos</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
@@ -147,19 +179,22 @@
               <dt>Destino</dt>
               <dd>El 6 de junio fue desmontada ya que fue concebida como una ambientación efímera. Se reconstruyó en el Museo de Arte Moderno de Buenos Aires en 2015.</dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Fílmico, fotográfico y documentación escrita</dd>
               <dt>Fuente</dt>
               <dd>Catálogo del MALBA, p. 66</dd>
             </dl>
           </details>
         </li>
 
-        <li class="evento" data-destino="desmontada">
+        <li class="evento" data-tipo="accion" data-destino="desmontada" data-registro="fotos prensa">
           <details>
             <summary>
               <span class="evento-anio fw-bold">1965</span>
               <span class="evento-titulo">Suceso Plástico</span>
-              <span class="etiqueta-destino">Desmontada</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="accion">Acción</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="desmontada">Desmontada</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="prensa">Notas de prensa</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
@@ -169,20 +204,23 @@
               <dt>Destino</dt>
               <dd>El 25 de julio fue desmontada ya que fue concebida como una acción efímera. </dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Notas de prensa y fotografías</dd>
               <dt>Fuente</dt>
               <dd>Catálogo del MALBA, p. 64</dd>
             </dl>
           </details>
         </li>
 
-        <li class="evento" data-destino="desmontada reconstruida">
+        <li class="evento" data-tipo="accion" data-destino="desmontada reconstruida" data-registro="fotos documentos">
           <details>
             <summary>
               <span class="evento-anio fw-bold">1973</span>
               <span class="evento-titulo">Galería Blanda</span>
-              <span class="etiqueta-destino">Desmontada</span>
-              <span class="etiqueta-destino">Reconstruida</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="accion">Acción</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="desmontada">Desmontada</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="reconstruida">Reconstruida</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="prensa">Notas de prensa</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
@@ -192,19 +230,23 @@
               <dt>Destino</dt>
               <dd>Desmontada en abril al terminar su presentación. Posteriormente reconstruída para otras 5 exposiciones.</dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Fotografías y documentación escrita</dd>
               <dt>Fuente</dt>
               <dd>Catálogo del MALBA, p. 92</dd>
             </dl>
           </details>
         </li>
 
-        <li class="evento" data-destino="consumida">
+        <li class="evento" data-tipo="objeto accion" data-destino="consumida" data-registro="fotos documentos">
           <details>
             <summary>
               <span class="evento-anio fw-bold">1979</span>
               <span class="evento-titulo">El Obelisco de pan dulce</span>
-              <span class="etiqueta-destino">Consumida o repartida</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="objeto">Objeto</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="accion">Acción</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="consumida">Consumida o repartida</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="documentos">Documentos</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
@@ -214,41 +256,48 @@
               <dt>Destino</dt>
               <dd>El 18 de noviembre a las 13 los bomberos voluntarios se acercaron al predio para ayudar a los espectadores a desmontar y repartir los paquetes mientras sonaba la canción Navidad de Buenos Aires.</dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Fotografías y documentación escrita</dd>
               <dt>Fuente</dt>
               <dd>Catálogo del MALBA, p. 112</dd>
             </dl>
           </details>
         </li>
 
-        <li class="evento" data-destino="destruida">
+        <li class="evento" data-tipo="accion objeto" data-destino="destruida" data-registro="fotos documentos">
           <details>
             <summary>
               <span class="evento-anio fw-bold">1981</span>
               <span class="evento-titulo">Carlos Gardel de fuego</span>
-              <span class="etiqueta-destino">Destruida</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="objeto">Objeto</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="accion">Acción</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="destruida">Destruida</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="documentos">Documentos</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
-              <dd>Obra de participación masiva</dd>
+              <dd>Acción</dd>
               <dt>Lugar</dt>
               <dd>Zona exterior al centro de exposiciones, Bienal de Medellín</dd>
               <dt>Destino</dt>
               <dd>La estructura se prendió fuego al final de la acción. Luego de la quema, los restos de la estructura se exhibieron como una esfinge durante los meses que duró la bienal.</dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Fotografías y documentación escrita</dd>
               <dt>Fuente</dt>
               <dd>Catálogo del Museo Nacional de Bellas Artes, p. 116</dd>
             </dl>
           </details>
         </li>
 
-        <li class="evento" data-destino="se-conserva">
+        <li class="evento" data-tipo="objeto" data-destino="se-conserva" data-registro="obra fotos">
           <details>
             <summary>
               <span class="evento-anio fw-bold">1983</span>
               <span class="evento-titulo">La catástrofe de la percepción</span>
-              <span class="etiqueta-destino">Se Conserva</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="objeto">Objeto</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="se-conserva">Se Conserva</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="obra">Obra</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
@@ -258,19 +307,23 @@
               <dt>Destino</dt>
               <dd>Forma parte de la colección del Museo Nacional de Bellas Artes.</dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Escultura física, fotografías</dd>
               <dt>Fuente</dt>
               <dd>https://www.bellasartes.gob.ar/coleccion/obra/9822/</dd>
             </dl>
           </details>
         </li>
 
-        <li class="evento" data-destino="consumida">
+        <li class="evento" data-tipo="objeto accion" data-destino="consumida" data-registro="fotos documentos">
           <details>
             <summary>
               <span class="evento-anio fw-bold">1983</span>
               <span class="evento-titulo">El Partenón de libros</span>
-              <span class="etiqueta-destino">Consumida o repartida</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="objeto">Objeto</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="accion">Acción</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="consumida">Consumida o repartida</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="documentos">Documentos</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
@@ -280,19 +333,23 @@
               <dt>Destino</dt>
               <dd>Al mediodía del 24 de diciembre, la estructura se inclinó con grúas para que el público retirara los libros.</dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Fotografías y documentación escrita</dd>
               <dt>Fuente</dt>
               <dd>Catálogo del MALBA, p. 120</dd>
             </dl>
           </details>
         </li>
 
-        <li class="evento" data-destino="consumida">
+        <li class="evento" data-tipo="objeto accion" data-destino="consumida" data-registro="fotos prensa">
           <details>
             <summary>
               <span class="evento-anio fw-bold">2012</span>
               <span class="evento-titulo">La Estatua de la libertad de cerezas</span>
-              <span class="etiqueta-destino">Consumida o repartida</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="objeto">Objeto</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="accion">Acción</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="consumida">Consumida o repartida</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="prensa">Notas de prensa</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
@@ -302,19 +359,23 @@
               <dt>Destino</dt>
               <dd>El 9 de noviembre de 2012 la artista invitó al público a comerse las cerezas: la gente participó y la figura desapareció; quedó la estructura de hierro que las sostenía hasta que terminó la muestra.</dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Notas de prensa y fotografías</dd>
               <dt>Fuente</dt>
               <dd>Catálogo del Bellas Artes, p. 24</dd>
             </dl>
           </details>
         </li>
 
-        <li class="evento" data-destino="se-conserva">
+        <li class="evento" data-tipo="objeto" data-destino="se-conserva" data-registro="obra video fotos">
           <details>
             <summary>
               <span class="evento-anio fw-bold">2021</span>
               <span class="evento-titulo">Pandemia</span>
-              <span class="etiqueta-destino">Se conserva</span>
+              <span class="etiqueta-tipo" data-categoria="tipo" data-valor="objeto">Objeto</span>
+              <span class="etiqueta-destino" data-categoria="destino" data-valor="se-conserva">Se Conserva</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="obra">Obra</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="video">Video</span>
+              <span class="etiqueta-registro" data-categoria="registro" data-valor="fotos">Fotografías</span>
             </summary>
             <dl class="evento-ficha">
               <dt>Tipo</dt>
@@ -324,7 +385,7 @@
               <dt>Destino</dt>
               <dd>No hay registro de su ubicación actual.</dd>
               <dt>Registro</dt>
-              <dd>[Completar: visual / documental / solo descripción]</dd>
+              <dd>Obra física, video documental y fotografías</dd>
               <dt>Fuente</dt>
               <dd>https://www.bellasartes.gob.ar/exhibiciones/pandemia/</dd>
             </dl>
@@ -333,7 +394,7 @@
 
       </ol>
 
-      <p id="sin-resultados" class="mt-4 fw-bold" hidden>No hay obras con ese destino en esta línea.</p>
+      <p id="sin-resultados" class="mt-4 fw-bold" hidden>No hay obras que cumplan todos los filtros elegidos.</p>
     </section>
 
     <!-- Fuentes -->

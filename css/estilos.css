@@ -574,3 +574,27 @@ figure.marco-imagen .foto-archivo{
   color: var(--texto-negro);
   border-bottom: var(--grosor-borde) solid var(--texto-negro);
 }
+
+/* ==========================================================================
+   FORMULARIO DE CONTACTO BRUTALISTA
+   ========================================================================== */
+.input-brutal {
+  background-color: var(--bg-principal);
+  border: var(--grosor-borde) solid var(--texto-negro);
+  color: var(--texto-negro);
+  padding: 0.75rem 1rem;
+  font-family: var(--fuente-cuerpo);
+}
+
+.input-brutal:focus {
+  background-color: #FFFFFF;
+  border-color: var(--acento-primario);
+  box-shadow: none;
+  outline: none;
+}
+
+.alerta-brutal-exito {
+  background-color: var(--bg-secundario);
+  border: var(--grosor-borde) solid var(--texto-negro);
+  color: var(--texto-negro);
+}

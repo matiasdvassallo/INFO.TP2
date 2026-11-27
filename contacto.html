@@ -1,26 +1,217 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <title> Contacto </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto | Marta Minujín</title>
+
+  <!-- Bootstrap 5.3 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts: Syne (Títulos) + DM Sans (Cuerpo) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+
+  <!-- Hoja de estilos propia -->
+  <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <main>
-        <nav>
-            <ul>
-                <li><a href="index.html"> Inicio </a></li>
-                <li><a href="pagina1.html"> Página 1 </a></li>
-                <li><a href="pagina2.html"> Página 2 </a></li>
-                <li><a href="pagina3.html"> Página 3 </a></li>
-                <li><a href="pagina4.html"> Página 4 </a></li>
-                <li><a href="pagina5.html"> Página 5 </a></li>
-                <li><a href="pagina6.html"> Página 6 </a></li>
-                <li><a href="contacto.html"> Contacto </a></li>
-                <li><a href="pagina3.html"> Créditos </a></li>
+
+  <!-- CABECERA NORMALIZADA: NOMBRE GIGANTE EDGE-TO-EDGE -->
+  <header class="container-fluid px-0 bg-principal">
+    <a class="marca-enlace text-decoration-none d-block" href="index.html" aria-label="Volver al inicio de Marta Minujín">
+      <span class="texto-gigante text-uppercase text-center d-block m-0 py-2 py-md-3">
+        Marta Minujín
+      </span>
+    </a>
+  </header>
+
+  <!-- BARRA DE NAVEGACIÓN STICKY -->
+  <nav class="navbar navbar-expand-lg navbar-brutal sticky-top" aria-label="Navegación principal">
+    <div class="container-fluid px-0">
+      <button class="navbar-toggler ms-auto me-3 my-2 border-2 border-dark rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 d-flex justify-content-around text-center m-0">
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="index.html">Inicio</a>
+          </li>
+
+          <!-- Sección 1: Acciones -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-brutal-item" href="acciones/index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Acciones
+            </a>
+            <ul class="dropdown-menu dropdown-brutal rounded-0 m-0">
+              <li><a class="dropdown-item" href="acciones/di-tella.html">Di Tella y el happening</a></li>
+              <li><a class="dropdown-item" href="acciones/intervenir-ciudad.html">Intervenir la ciudad</a></li>
+              <li><a class="dropdown-item" href="acciones/otros-escenarios.html">Otros escenarios</a></li>
             </ul>
-        </nav>
-    </main>
-    <script src="js/contacto.js"></script>
-</body>    
+          </li>
+
+          <!-- Después del evento -->
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="despues-del-evento.html">Después del evento</a>
+          </li>
+
+          <!-- Sección 3: Trayectoria -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-brutal-item" href="trayectoria/index.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Trayectoria
+            </a>
+            <ul class="dropdown-menu dropdown-brutal rounded-0 m-0">
+              <li><a class="dropdown-item" href="trayectoria/cronologia.html">Cronología</a></li>
+              <li><a class="dropdown-item" href="trayectoria/recepcion.html">Reconocimiento y recepción</a></li>
+            </ul>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item active" href="contacto.html" aria-current="page">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="creditos.html">Créditos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- BREADCRUMB -->
+  <nav aria-label="breadcrumb" class="border-bottom-brutal px-3 px-md-5 py-3">
+    <ol class="breadcrumb m-0 text-uppercase fw-bold small">
+      <li class="breadcrumb-item"><a href="index.html" class="text-dark">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Contacto</li>
+    </ol>
+  </nav>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main>
+
+    <!-- ENCABEZADO DE SECCIÓN -->
+    <section class="container-fluid p-4 p-md-5 border-bottom-brutal">
+      <span class="text-uppercase fw-bold small d-block mb-2">Archivo &amp; Consultas</span>
+      <h1 class="display-4 fw-bold text-uppercase mb-3">Contacto</h1>
+      <p class="lead mb-0">
+        ¿Tenés material documental, consultas académicas o comentarios sobre el archivo digital? 
+        Completá el formulario y nos pondremos en contacto.
+      </p>
+    </section>
+
+    <!-- GRILLA PRINCIPAL: INFO + FORMULARIO -->
+    <section class="container-fluid px-0 border-bottom-brutal">
+      <div class="row g-0">
+
+        <!-- Columna Izquierda: Información de referencia -->
+        <aside class="col-lg-5 p-4 p-md-5 border-end-lg-brutal border-bottom-sm-brutal bg-bloque-destacado d-flex flex-column justify-content-between">
+          <div>
+            <span class="badge bg-dark rounded-0 mb-3">CANAL DE ARCHIVO</span>
+            <h2 class="h3 fw-bold text-uppercase mb-3">Aportes y Consultas</h2>
+            <p class="mb-4">
+              Este proyecto reconstruye obras efímeras a partir de registros fotográficos, catálogos y crónicas de época. 
+              Si querés aportar referencias bibliográficas o realizar consultas sobre el proyecto, escribinos.
+            </p>
+            <ul class="list-unstyled mb-0">
+              <li class="mb-2"><strong>Proyecto:</strong> Archivo Digital Marta Minujín</li>
+              <li class="mb-2"><strong>Cátedra:</strong> Informática General — UNA</li>
+              <li class="mb-0"><strong>Ubicación:</strong> Buenos Aires, Argentina</li>
+            </ul>
+          </div>
+
+          <div class="mt-5 pt-3 border-top border-dark border-2">
+            <p class="small fw-bold text-uppercase mb-0">Todos los campos marcados con * son obligatorios.</p>
+          </div>
+        </aside>
+
+        <!-- Columna Derecha: Formulario con validación JS -->
+        <div class="col-lg-7 p-4 p-md-5">
+          <form id="formulario-contacto" action="#" method="post" novalidate>
+
+            <!-- Campo 1: Nombre y Apellido -->
+            <div class="mb-4">
+              <label for="nombre" class="form-label fw-bold text-uppercase small">Nombre y apellido *</label>
+              <input type="text" class="form-control input-brutal rounded-0" id="nombre" name="nombre" placeholder="Ej: Sofía Suárez" required minlength="3" maxlength="50">
+              <div class="invalid-feedback fw-bold" id="error-nombre"></div>
+            </div>
+
+            <!-- Campo 2: Correo Electrónico -->
+            <div class="mb-4">
+              <label for="email" class="form-label fw-bold text-uppercase small">Correo electrónico *</label>
+              <input type="email" class="form-control input-brutal rounded-0" id="email" name="email" placeholder="Ej: nombre@dominio.com" required>
+              <div class="invalid-feedback fw-bold" id="error-email"></div>
+            </div>
+
+            <!-- Campo 3: Motivo de consulta -->
+            <div class="mb-4">
+              <label for="motivo" class="form-label fw-bold text-uppercase small">Motivo de consulta *</label>
+              <select class="form-select input-brutal rounded-0" id="motivo" name="motivo" required>
+                <option value="" selected disabled>Seleccioná una opción...</option>
+                <option value="archivo">Aporte de material / Archivo</option>
+                <option value="academico">Consulta académica / Investigación</option>
+                <option value="prensa">Prensa y difusión</option>
+                <option value="otro">Otro motivo</option>
+              </select>
+              <div class="invalid-feedback fw-bold" id="error-motivo"></div>
+            </div>
+
+            <!-- Campo 4: Mensaje -->
+            <div class="mb-4">
+              <label for="mensaje" class="form-label fw-bold text-uppercase small">Mensaje *</label>
+              <textarea class="form-control input-brutal rounded-0" id="mensaje" name="mensaje" rows="5" placeholder="Escribí tu consulta (mínimo 15 caracteres)..." required minlength="15" maxlength="500"></textarea>
+              <div class="d-flex justify-content-between mt-1">
+                <div class="invalid-feedback fw-bold d-block" id="error-mensaje"></div>
+                <small class="text-muted ms-auto" id="contador-caracteres">0 / 500</small>
+              </div>
+            </div>
+
+            <!-- Botón de envío -->
+            <button type="submit" class="btn btn-brutal w-100">Enviar consulta →</button>
+
+            <!-- Cartel de confirmación (oculto hasta que pase toda la validación) -->
+            <div id="alerta-exito" class="alert alerta-brutal-exito rounded-0 mt-4 d-none" role="alert">
+              <h4 class="h5 fw-bold text-uppercase mb-1">¡Consulta enviada correctamente!</h4>
+              <p class="mb-0" id="texto-confirmacion"></p>
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER INSTITUCIONAL -->
+  <footer class="container-fluid bg-footer text-white py-5 px-4 px-md-5">
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <h4 class="fw-bold text-uppercase mb-2">Marta Minujín</h4>
+        <p class="text-white-50 mb-1">Sitio web desarrollado para Trabajo Práctico 2 — Informática General 2026.</p>
+        <small class="text-white-50">Cátedra Drelichman / Paleo / Nadel / Morales — UNA Artes Multimediales.</small>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-uppercase fw-bold mb-3">Secciones</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-1"><a href="acciones/index.html" class="footer-link">Acciones</a></li>
+          <li class="mb-1"><a href="despues-del-evento.html" class="footer-link">Después del evento</a></li>
+          <li class="mb-1"><a href="trayectoria/index.html" class="footer-link">Trayectoria</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-uppercase fw-bold mb-3">Institucional</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-1"><a href="contacto.html" class="footer-link">Contacto</a></li>
+          <li class="mb-1"><a href="creditos.html" class="footer-link">Créditos del equipo</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5.3 JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Script propio de validación (siempre debajo de Bootstrap) -->
+  <script src="js/validacion.js"></script>
+</body>
 </html>

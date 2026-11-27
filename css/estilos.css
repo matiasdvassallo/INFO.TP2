@@ -558,3 +558,19 @@ figure.marco-imagen .foto-archivo{
   --cat-destino: #FF4081;   /* rosa acento */
   --cat-registro: #FFD60A;  /* amarillo */
 }
+
+.marca-enlace,
+.marca-enlace:hover {
+  text-decoration: none;
+  color: var(--texto-negro);
+}
+
+.texto-gigante {
+  font-family: var(--fuente-titulos);
+  font-weight: 800;
+  font-size: calc(6.5vw + 1.8rem);
+  line-height: 0.85;
+  letter-spacing: -0.04em;
+  color: var(--texto-negro);
+  border-bottom: var(--grosor-borde) solid var(--texto-negro);
+}

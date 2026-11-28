@@ -1,26 +1,296 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    <title> Página 6 </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reconocimiento y recepción | Marta Minujín</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/estilos.css">
 </head>
 <body>
-    <main>
-        <nav>
-            <ul>
-                <li><a href="index.html"> Inicio </a></li>
-                <li><a href="pagina1.html"> Página 1 </a></li>
-                <li><a href="pagina2.html"> Página 2 </a></li>
-                <li><a href="pagina3.html"> Página 3 </a></li>
-                <li><a href="pagina4.html"> Página 4 </a></li>
-                <li><a href="pagina5.html"> Página 5 </a></li>
-                <li><a href="pagina6.html"> Página 6 </a></li>
-                <li><a href="contacto.html"> Contacto </a></li>
-                <li><a href="pagina3.html"> Créditos </a></li>
+
+  <header class="container-fluid px-0 bg-principal">
+    <a class="marca-enlace" href="../index.html" aria-label="Volver al inicio de Marta Minujín">
+      <span class="texto-gigante text-uppercase text-center d-block m-0 py-2 py-md-3">Marta Minujín</span>
+    </a>
+  </header>
+
+  <nav class="navbar navbar-expand-lg navbar-brutal sticky-top" aria-label="Navegación principal">
+    <div class="container-fluid px-0">
+      <button class="navbar-toggler ms-auto me-3 my-2 border-2 border-dark rounded-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Abrir menú">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav w-100 d-flex justify-content-around text-center m-0">
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="../index.html">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-brutal-item" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Acciones</a>
+            <ul class="dropdown-menu dropdown-brutal rounded-0 m-0">
+              <li><a class="dropdown-item" href="../acciones/di-tella.html">Di Tella y el happening</a></li>
+              <li><a class="dropdown-item" href="../acciones/intervenir-ciudad.html">Intervenir la ciudad</a></li>
+              <li><a class="dropdown-item" href="../acciones/otros-escenarios.html">Otros escenarios</a></li>
             </ul>
-        </nav>
-    </main>
-    <script src="js/pagina6.js"></script>
-</body>    
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="../despues-del-evento.html">Después del evento</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle nav-brutal-item active" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Trayectoria</a>
+            <ul class="dropdown-menu dropdown-brutal rounded-0 m-0">
+              <li><a class="dropdown-item" href="cronologia.html">Cronología</a></li>
+              <li><a class="dropdown-item" href="recepcion.html" aria-current="page">Reconocimiento y recepción</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="../contacto.html">Contacto</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link nav-brutal-item" href="../creditos.html">Créditos</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <nav aria-label="breadcrumb" class="border-bottom-brutal px-3 px-md-5 py-3">
+    <ol class="breadcrumb m-0 text-uppercase fw-bold small">
+      <li class="breadcrumb-item"><a href="../index.html" class="text-dark">Inicio</a></li>
+      <li class="breadcrumb-item"><a href="index.html" class="text-dark">Trayectoria</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Reconocimiento y recepción</li>
+    </ol>
+  </nav>
+
+  <main>
+
+    <!-- Introducción -->
+    <section class="container-fluid px-0 border-bottom-brutal" aria-labelledby="titulo-pagina">
+      <div class="p-4 p-md-5">
+        <span class="etiqueta-seccion">Trayectoria / 1964–2026</span>
+        <h1 id="titulo-pagina" class="titulo-pagina text-uppercase mt-3 mb-4">Lo que se<br>dijo de <span class="titulo-resaltado">la obra.</span></h1>
+        <p class="lead intro-bajada mb-0">Instituciones, crítica y algunas distinciones que acompañaron a Minujín a lo largo de su carrera.</p>
+      </div>
+    </section>
+
+    <!-- 1964 · Premio Di Tella -->
+    <article class="row g-0 border-bottom-brutal" aria-labelledby="titulo-1964">
+      <div class="col-lg-6 border-end-lg-brutal">
+        <figure class="marco-imagen mb-0">
+          <img class="foto-archivo" src="../img/trayectoria/di-tella.png"
+               alt="Instituto Torcuato Di Tella" loading="lazy">
+          <figcaption class="pie-foto">Instituto Torcuato Di Tella</figcaption>
+        </figure>
+      </div>
+      <div class="col-lg-6 p-4 p-md-5 d-flex flex-column justify-content-between">
+        <div>
+          <p class="etiqueta-seccion mb-2">Reconocimiento institucional · 1964</p>
+          <h2 id="titulo-1964" class="titulo-obra text-uppercase mt-2">Premio Di Tella</h2>
+          <p class="texto-editorial">Recibió el Premio Nacional del Instituto Torcuato Di Tella.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> Catálogo del MALBA, p. 137.</p>
+      </div>
+    </article>
+
+    <!-- 2009 · Artnexus -->
+    <article class="row g-0 border-bottom-brutal" aria-labelledby="titulo-2009">
+      <div class="col-lg-6 order-lg-2">
+        <figure class="marco-imagen mb-0">
+          <img class="foto-archivo" src="../img/trayectoria/artnexus.webp"
+               alt="Artnexus #75, 2009–2010." loading="lazy">
+          <figcaption class="pie-foto">Artnexus #75, 2009–2010.</figcaption>
+        </figure>
+      </div>
+      <div class="col-lg-6 order-lg-1 p-4 p-md-5 d-flex flex-column justify-content-between border-end-lg-brutal">
+        <div>
+          <p class="etiqueta-seccion mb-2">Crítica · 2009</p>
+          <h2 id="titulo-2009" class="titulo-obra text-uppercase mt-2">Artnexus</h2>
+          <p class="texto-editorial">En esta revista, Victoria Verlichak describe <em>Suceso plástico</em> (1965) como una acción de gran escándalo y considera improbable que una propuesta de ese tipo vuelva a repetirse.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> Victoria Verlichak, Artnexus #75, diciembre de 2009 – febrero de 2010.</p>
+      </div>
+    </article>
+
+    <!-- 2014 · MALBA -->
+    <article class="row g-0 border-bottom-brutal" aria-labelledby="titulo-2014">
+      <div class="col-12 p-4 p-md-5 d-flex flex-column justify-content-between align-items-center text-center">
+        <div>
+          <p class="etiqueta-seccion mb-2">Muestra institucional · 2014</p>
+          <h2 id="titulo-2014" class="titulo-obra text-uppercase mt-2">Obras 1959–1989</h2>
+          <p class="texto-editorial">El MALBA presentó la retrospectiva <em>Marta Minujín. Obras 1959–1989</em>, con curaduría de Victoria Noorthoorn. La curadora propone tres claves de lectura: redefinir las categorías del arte, imaginar un destino a escala mundial y afirmar una libertad del cuerpo y del espíritu.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> MALBA, nota sobre la exposición, 4 de septiembre de 2014.</p>
+      </div>
+    </article>
+
+    <!-- 2015–2016 · MAMBA -->
+    <article class="row g-0 border-bottom-brutal" aria-labelledby="titulo-2015">
+      <div class="col-lg-6 order-lg-1">
+        <figure class="marco-imagen mb-0">
+          <img class="foto-archivo" src="../img/trayectoria/libro-lamenesunda.webp"
+               alt="Tapa del libro La Menesunda según Marta Minujín" loading="lazy">
+          <figcaption class="pie-foto">Tapa de <em>La Menesunda según Marta Minujín</em></figcaption>
+        </figure>
+      </div>
+      <div class="col-lg-6 order-lg-2 p-4 p-md-5 d-flex flex-column justify-content-between border-end-lg-brutal">
+        <div>
+          <p class="etiqueta-seccion mb-2">Publicación institucional · 2015</p>
+          <h2 id="titulo-2015" class="titulo-obra text-uppercase mt-2">Libro sobre La Menesunda</h2>
+          <p class="texto-editorial">"La Menesunda / Según Marta Minujín" se presentó en el Museo de Arte Moderno de Buenos Aires entre el 8 de octubre de 2015 y el 28 de febrero de 2016. Una de sus autoras, Sofía Dourron, describe una experiencia que confrontaba y sorprendía al visitante, y señala que sus creadores no la consideraban ni una obra ni un happening.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> Sofía Dourron, texto en el libro publicado por el MAMBA, 2015–2016.</p>
+      </div>
+    </article>
+
+    <!-- 2017 · documenta 14 -->
+    <article class="row g-0 border-bottom-brutal" aria-labelledby="titulo-2017">
+      <div class="col-lg-6 order-lg-2 border-end-lg-brutal">
+        <figure class="marco-imagen mb-0">
+          <img class="foto-archivo" src="../img/trayectoria/documenta-14.jpg"
+               alt="Portada de documenta 14" loading="lazy">
+          <figcaption class="pie-foto">Portada de documenta 14, 2017.</figcaption>
+        </figure>
+      </div>
+      <div class="col-lg-6 order-lg-1 p-4 p-md-5 d-flex flex-column justify-content-between">
+        <div>
+          <p class="etiqueta-seccion mb-2">Muestra internacional · 2017</p>
+          <h2 id="titulo-2017" class="titulo-obra text-uppercase mt-2">documenta 14</h2>
+          <p class="texto-editorial">Pierre Bal-Blanc lee los monumentos de Minujín como una forma de repensar la democracia y la educación a través del arte. Para él, la obra vuelve a poner en juego símbolos de la vida pública.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> Pierre Bal-Blanc, texto sobre <em>El Partenón de libros</em>, documenta 14, 2017.</p>
+      </div>
+    </article>
+
+    <!-- 2019 · Premio Nacional a la Trayectoria | 2020 · Katzenstein -->
+    <article class="row g-0 border-bottom-brutal" aria-labelledby="titulo-2019">
+      <div class="col-lg-8 p-4 p-md-5 d-flex flex-column justify-content-between border-end-lg-brutal">
+        <div>
+          <p class="etiqueta-seccion mb-2">Reconocimiento institucional · 2019</p>
+          <h2 id="titulo-2019" class="titulo-obra text-uppercase mt-2">Premio a la Trayectoria</h2>
+          <p class="texto-editorial">Recibió el Premio Nacional a la Trayectoria del Fondo Nacional de las Artes, entregado en el Museo Nacional de Bellas Artes.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> Fundación Konex, biografía de Marta Minujín.</p>
+      </div>
+      <div class="col-lg-4 p-4 p-md-5 d-flex flex-column justify-content-between">
+        <div>
+          <p class="etiqueta-seccion mb-2">Crítica · 2020</p>
+          <h2 id="titulo-2020" class="titulo-obra text-uppercase mt-2">La fama como obra</h2>
+          <p class="texto-editorial">Inés Katzenstein sostiene que, en el caso de Minujín, es difícil separar la obra de la figura de la artista. Su fama, estable y ampliamente reconocida, funciona como la obra más auténticamente pop y la convierte en un ícono de la cultura argentina.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> Inés Katzenstein, La Nación, 29 de junio de 2020.</p>
+      </div>
+    </article>
+
+    <!-- 2021 · UTDT -->
+    <article class="row g-0 border-bottom-brutal" aria-labelledby="titulo-2021">
+      <div class="col-lg-6 order-lg-1">
+        <figure class="marco-imagen mb-0">
+          <img class="foto-archivo" src="../img/trayectoria/ditella-reconocimiento.webp"
+               alt="Marta Minujín sostiene el diploma de Doctora Honoris Causa junto a un hombre que la aplaude" loading="lazy">
+          <figcaption class="pie-foto">Entrega del Doctorado Honoris Causa.</figcaption>
+        </figure>
+      </div>
+      <div class="col-lg-6 order-lg-2 p-4 p-md-5 d-flex flex-column justify-content-between border-end-lg-brutal">
+        <div>
+          <p class="etiqueta-seccion mb-2">Reconocimiento institucional · 2021</p>
+          <h2 id="titulo-2021" class="titulo-obra text-uppercase mt-2">Doctora Honoris Causa</h2>
+          <p class="texto-editorial">La Universidad Torcuato Di Tella le otorgó el grado de Doctora Honoris Causa. Carlos Huffmann destacó que su práctica redefinió el arte conceptual para incorporar la alegría de las celebraciones populares como una forma de validación estética.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> UTDT, "Marta Minujín recibió el grado de Doctora Honoris Causa", 11 de noviembre de 2021.</p>
+      </div>
+    </article>
+
+    <!-- 2026 · Bienal -->
+    <article class="row g-0 border-bottom-brutal" aria-labelledby="titulo-2026-bienal">
+      <div class="col-lg-6 order-lg-2">
+        <figure class="marco-imagen mb-0">
+          <img class="foto-archivo" src="../img/trayectoria/reconocimiento-bienal.webp"
+               alt="Marta Minujín recibe el Premio a la Trayectoria de la Bienal, con un micrófono en la mano y un certificado" loading="lazy">
+          <figcaption class="pie-foto">Entrega del Premio a la Trayectoria.</figcaption>
+        </figure>
+      </div>
+      <div class="col-lg-6 order-lg-1 p-4 p-md-5 d-flex flex-column justify-content-between border-end-lg-brutal">
+        <div>
+          <p class="etiqueta-seccion mb-2">Reconocimiento institucional · 2026</p>
+          <h2 id="titulo-2026-bienal" class="titulo-obra text-uppercase mt-2">Bienal de Arquitectura</h2>
+          <p class="texto-editorial">La Bienal Internacional de Arquitectura de Buenos Aires le otorgó el Premio a la Trayectoria. Según La Nación, es la primera artista reconocida por su trayectoria en esa bienal, a los 83 años.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> Celina Chatruc, La Nación, 11 de octubre de 2026.</p>
+      </div>
+    </article>
+
+    <!-- 2026 · De Benit -->
+    <article class="row g-0 border-bottom-brutal" aria-labelledby="titulo-2026-benit">
+      <div class="col-12 p-4 p-md-5 d-flex flex-column justify-content-between align-items-center text-center">
+        <div>
+          <p class="etiqueta-seccion mb-2">Crítica · 2026</p>
+          <h2 id="titulo-2026-benit" class="titulo-obra text-uppercase mt-2">La Menesunda hoy</h2>
+          <p class="texto-editorial mx-auto">Álvaro De Benit analiza la reconstrucción de <em>La Menesunda</em> y sostiene que la obra no quedó anacrónica. Nacida como algo disruptivo, hoy funciona como testimonio de una época distinta.</p>
+        </div>
+        <p class="nota-archivo mb-0"><strong>Fuente:</strong> Álvaro De Benit, Artealdia, 18 de noviembre de 2026.</p>
+      </div>
+    </article>
+
+    <!-- Cierre -->
+    <section class="container-fluid px-0 border-bottom-brutal cierre-seccion">
+      <div class="row g-0">
+        <div class="col-lg-8 p-4 p-md-5 border-end-lg-brutal">
+          <p class="lead mb-0">Valorar una obra implica, en parte, preguntarse qué quedó de ella. Visiten la galería para ver esos registros.</p>
+        </div>
+        <div class="col-lg-4 p-4 p-md-5 d-flex align-items-center justify-content-center">
+          <a class="btn btn-brutal w-100" href="../despues-del-evento.html">Ir a la galería →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fuentes -->
+    <section class="container-fluid p-4 p-md-5 fuentes-seccion" aria-labelledby="fuentes-titulo">
+        <h2 id="fuentes-titulo" class="h5 text-uppercase fw-bold">Fuentes de esta página</h2>
+        <ul class="mb-0">
+            <li>Catálogo del MALBA, p. 137. <a href="https://malba.org.ar/catalogo-marta-minujin-obras-1959-1989/" target="_blank" rel="noopener noreferrer">malba.org.ar</a></li>
+            <li>Victoria Verlichak, Artnexus #75, diciembre de 2009 – febrero de 2010. <a href="https://artnexus.com/es/revistas/artnexus-75-arte-en-colombia-121/articulos/marta-minujin-irreverente" target="_blank" rel="noopener noreferrer">artnexus.com</a></li>
+            <li>MALBA, nota sobre <em>Marta Minujín. Obras 1959–1989</em>, 4 de septiembre de 2014. <a href="https://malba.org.ar/evento/marta-minujin-obras-1959-1989/" target="_blank" rel="noopener noreferrer">malba.org.ar/evento</a></li>
+            <li>Sofía Dourron, en <em>La Menesunda según Marta Minujín</em>, MAMBA, 2015–2016. <a href="https://museomoderno.org/libros/la-menesunda-segun-marta-minujin/" target="_blank" rel="noopener noreferrer">museomoderno.org</a></li>
+            <li>Pierre Bal-Blanc, texto sobre <em>El Partenón de libros</em>, documenta 14, Kassel, 2017. <a href="https://www.documenta14.de/en/artists/1063/marta-minujin" target="_blank" rel="noopener noreferrer">documenta14.de</a></li>
+            <li>Fundación Konex, biografía de Marta Minujín. <a href="https://www.fundacionkonex.org" target="_blank" rel="noopener noreferrer">fundacionkonex.org</a></li>
+            <li>Inés Katzenstein, La Nación, 29 de junio de 2020. <a href="https://www.lanacion.com.ar/" target="_blank" rel="noopener noreferrer">lanacion.com.ar</a></li>
+            <li>UTDT, "Marta Minujín recibió el grado de Doctora Honoris Causa", 11 de noviembre de 2021. <a href="https://www.utdt.edu/ver_nota_prensa.php?id_nota_prensa=20074&id_item_menu=6" target="_blank" rel="noopener noreferrer">utdt.edu</a></li>
+            <li>Museo Nacional de Bellas Artes, exhibición <em>Pandemia</em>. <a href="https://www.bellasartes.gob.ar/exhibiciones/pandemia/" target="_blank" rel="noopener noreferrer">bellasartes.gob.ar/exhibiciones/pandemia</a></li>
+            <li>Celina Chatruc, La Nación, 11 de octubre de 2026. <a href="https://www.lanacion.com.ar/" target="_blank" rel="noopener noreferrer">lanacion.com.ar</a></li>
+            <li>Álvaro De Benit, Artealdia, 18 de noviembre de 2026. <a href="https://www.artealdia.com" target="_blank" rel="noopener noreferrer">artealdia.com</a></li>
+        </ul>
+    </section>
+
+  </main>
+
+  <footer class="container-fluid bg-footer text-white py-5 px-4 px-md-5">
+    <div class="row gy-4">
+      <div class="col-md-6">
+        <h4 class="fw-bold text-uppercase mb-2">Marta Minujín</h4>
+        <p class="text-white-50 mb-1">Sitio web desarrollado para Trabajo Práctico 2 — Informática General 2026.</p>
+        <small class="text-white-50">Cátedra Drelichman / Paleo / Nadel / Morales — UNA Artes Multimediales.</small>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-uppercase fw-bold mb-3">Secciones</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-1"><a class="footer-link" href="../acciones/index.html">Acciones</a></li>
+          <li class="mb-1"><a class="footer-link" href="../despues-del-evento.html">Después del evento</a></li>
+          <li class="mb-1"><a class="footer-link" href="index.html">Trayectoria</a></li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="text-uppercase fw-bold mb-3">Institucional</h6>
+        <ul class="list-unstyled mb-0">
+          <li class="mb-1"><a class="footer-link" href="../contacto.html">Contacto</a></li>
+          <li class="mb-1"><a class="footer-link" href="../creditos.html">Créditos del equipo</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>

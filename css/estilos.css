@@ -408,6 +408,11 @@ figure.marco-imagen .foto-archivo{
    ========================================================================== */
 [hidden] { display: none !important; }
 
+.categoria-btn[data-categoria="tipo"]:hover,
+.categoria-btn[data-categoria="tipo"][aria-pressed="true"] {
+    color: #FFFFFF;
+}
+
 .filtros {
   display: flex;
   flex-wrap: wrap;
@@ -598,3 +603,46 @@ figure.marco-imagen .foto-archivo{
   border: var(--grosor-borde) solid var(--texto-negro);
   color: var(--texto-negro);
 }
+
+/* ==========================================================================
+   ACCIONES/INDEX.HTML
+   ========================================================================== */
+.acciones-intro {
+    background-color: #FFFFFF;
+}
+
+.acciones-intro h1 {
+    color: #111111;
+}
+
+article:nth-child(1) .recorrido-color {
+    background-color: #2938FF;
+    color: #fff;
+}
+
+article:nth-child(2) .recorrido-color {
+    background-color: #FF4081;
+    color: #111;
+}
+
+article:nth-child(3) .recorrido-color {
+    background-color: #FFD60A;
+    color: #111;
+}
+
+/* ==========================================================================
+   ACCIONES/OTROS-ESCENARIOS.HTML
+   ========================================================================== */
+
+.marca-enlace { color: inherit; text-decoration: none; }
+.escenario-intro { background: #fff; color: #111; }
+.escenario { scroll-margin-top: 5rem; }
+.escenario-verbo { font-family: Syne, sans-serif; font-weight: 800; font-size: clamp(2.5rem, 10vw, 10rem); line-height: .95; overflow-wrap: anywhere; }
+.franja-01 { background: #2938ff; color: white; }
+.franja-02 { background: #ff4081; color: #111; }
+.franja-03 { background: #ffda00; color: #111; }
+.escenario-registro { background: #e8f4f8; }
+.archivo-pendiente { border: 2px dashed #111; min-height: 9rem; display: flex; flex-direction: column; justify-content: center; padding: 1rem; gap: .5rem; font-weight: 700; }
+.fuera-recorrido { background: #111; color: white; }
+.fuera-recorrido .btn { background: #ffda00; color: #111; border: 2px solid white; }
+.fuera-recorrido a { color: #fff; text-decoration: underline; }
